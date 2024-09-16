@@ -46,13 +46,18 @@ document.getElementById('btn').addEventListener('click', function(){
 })
 
 document.getElementById('delete-confirm').addEventListener('keyup', function(event){
-    const 
+    const text = event.target.value;
+    const deleteButton = document.getElementById('delete-text');
+    if(text === 'delete'){
+        deleteButton.removeAttribute('disabled');
+    }
+    else{
+        deleteButton.setAttribute('disabled', true);
+    }
 })
 document.getElementById('delete-text').addEventListener('click', function(){
     const text = document.getElementById('text-delete');
-    text.style.display = 'none';
+    text.style.display= 'none';
 })
-
-
 
 
